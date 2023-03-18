@@ -3,7 +3,7 @@ resource "aws_instance" "docker_server" {
   instance_type   = "t2.micro"
   key_name = "namuna"
   security_groups = ["default"]
-  user_data = file("docker-compose.yml
+  user_data = file("docker-compose.yml")
 
   tags = {
     Name = "docker_server-terraform"
