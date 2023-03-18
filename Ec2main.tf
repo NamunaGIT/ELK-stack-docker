@@ -103,7 +103,7 @@ resource "aws_route_table_association" "MyLab_Assn" {
 
 # Create an AWS EC2 Instance
 
-resource "aws_instance" "DemoResource" {
+resource "aws_instance" "resource_server" {
   ami           = var.ami
   instance_type = var.instance_type
   key_name = "EC2"
@@ -112,6 +112,6 @@ resource "aws_instance" "DemoResource" {
   associate_public_ip_address = true
   
   tags = {
-    Name = "DemoResource"
+    Name = "resource_server"
   }
 }
